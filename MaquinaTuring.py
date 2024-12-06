@@ -1,4 +1,4 @@
-#Código creado por Leonardo Mellado, Nicolás Reyes, Héctor Valenzuela
+#Código creado por Leonardo Mellado, Nicolas Reyes, Hector Valenzuela
 
 #Función para procesar el archivo
 def leerArchivo(archivo):
@@ -52,18 +52,18 @@ def prints_maquina_turing(estados, simbolos, alfabeto, transiciones,num_cintas,c
     else:
         print(f"\n{num_cintas} caso disponible\n")
 
-    #Procesamiento de las cadenas
+    # Procesamiento de las cadenas
     for i in range(len(cintas)):
        print(f">> Caso {i+1}")
        print(f"Cadena de entrada: {cintas[i]}")
        print("[La cadena es aceptada]\n" if transicionar(cintas[i], transiciones) else "[La cadena es rechazada]\n")
  
-#Función para realizar los movimientos de cabezal, lectura e escritura de la cinta 
+# Función para realizar los movimientos de cabezal, lectura e escritura de la cinta 
 def transicionar(cadena,transiciones):
     cabezal = 0
     cinta = cadena + ["-"]
     estado = 0 
-    #Mientras no se llegue a un estado final la maquina sigue funcionando
+    # Mientras no se llegue a un estado final la maquina sigue funcionando
     while estado != -1:
         
         simbolo = cinta[cabezal]
@@ -83,17 +83,18 @@ def transicionar(cadena,transiciones):
         elif mover == "d":
             cabezal += 1
         #print(cinta)
-    #Si llega al estado final y en la cinta de la posición del cabezal solo se encuentra una a y solo existe una a en la cinta y no es la cadena vacia se dira que es una cadena aceptada
+        
+    # Si llega al estado final y en la cinta de la posición del cabezal solo se encuentra una a y solo existe una a en la cinta y no es la cadena vacia se dira que es una cadena aceptada
     if estado == -1 and cinta[cabezal] == "a" and cinta.count("a") == 1 and cadena != []:
         print("Cinta resultante: ",cinta)
         print("Posición del cabezal: ",cabezal)
         return True
-    #Si no cumple lo de arriba y llega al estado final es un estado rechazado
+    # Si no cumple lo de arriba y llega al estado final es un estado rechazado
     if estado == -1:
         print("Cinta resultante: ",cinta)
         print("Posición del cabezal: ",cabezal)
         return False
-    #Si llega a cualquier otro estado se rechaza
+    # Si llega a cualquier otro estado se rechaza
     else:
         print("Cinta resultante: ",cinta)
         print("Posición del cabezal: ",cabezal)
@@ -101,7 +102,7 @@ def transicionar(cadena,transiciones):
 
 
 def movimiento(tupla):
-    #Procesamiento de las transiciones para no tener que hacer 100 ifs
+    # Procesamiento de las transiciones para no tener que hacer 100 ifs
     if len(tupla) == 4:
         nuevaTupla = (tupla[0],tupla[1],"-1")
         agregarCinta=nuevaTupla[0]
