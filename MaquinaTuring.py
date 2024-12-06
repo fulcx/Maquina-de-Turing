@@ -1,4 +1,4 @@
-#Código creado por Leonardo Mellado, Nicolas Reyes, Hector Valenzuela
+#Código creado por Leonardo Mellado, Nicolás Reyes, Héctor Valenzuela
 
 #Función para procesar el archivo
 def leerArchivo(archivo):
