@@ -103,7 +103,7 @@ def transicionar(cadena,transiciones):
 
 
 def movimiento(tupla):
-    # Procesamiento de las transiciones para no tener que hacer 100 ifs
+    # Procesamiento de las transiciones para no tener que hacer 100 if
     if len(tupla) == 4:
         nuevaTupla = (tupla[0],tupla[1],"-1")
         agregarCinta=nuevaTupla[0]
