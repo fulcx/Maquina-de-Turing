@@ -1,4 +1,4 @@
-#Código creado por Leonardo Mellado, Nicolás Reyes, Héctor Valenzuela
+#Código creado por Leonardo Mellado, Nicolas Reyes, Hector Valenzuela
 
 #Función para procesar el archivo
 def leerArchivo(archivo):
@@ -84,7 +84,8 @@ def transicionar(cadena,transiciones):
             cabezal += 1
         #print(cinta)
         
-    # Si llega al estado final y en la cinta de la posición del cabezal solo se encuentra una a y solo existe una a en la cinta y no es la cadena vacia se dira que es una cadena aceptada
+    # Si llega al estado final y en la cinta de la posición del cabezal solo se encuentra una "a" 
+    # y solo existe una "a" en la cinta y no es la cadena vacía se dirá que es una cadena aceptada
     if estado == -1 and cinta[cabezal] == "a" and cinta.count("a") == 1 and cadena != []:
         print("Cinta resultante: ",cinta)
         print("Posición del cabezal: ",cabezal)
