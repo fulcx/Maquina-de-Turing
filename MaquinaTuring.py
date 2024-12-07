@@ -76,7 +76,7 @@ def transicionar(cadena,transiciones):
         agregarCinta,mover,estado = movimiento(tuple(transiciones[estado][simbolo].replace(" ","")))
 
         #print(f"Agregar Cinta: {agregarCinta}, Mover: {mover}, Estado: {estado}")
-
+        #print(f"Cabezal : {cabezal}")
         cinta[cabezal] = agregarCinta
         if mover == "i":
             cabezal += -1
