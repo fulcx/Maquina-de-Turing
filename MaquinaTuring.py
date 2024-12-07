@@ -58,7 +58,7 @@ def prints_maquina_turing(estados, simbolos, alfabeto, transiciones,num_cintas,c
        print(f"Cadena de entrada: {cintas[i]}")
        print("[La cadena es aceptada]\n" if transicionar(cintas[i], transiciones) else "[La cadena es rechazada]\n")
  
-# Función para realizar los movimientos de cabezal, lectura e escritura de la cinta 
+# Función para realizar los movimientos de cabezal, lectura y escritura de la cinta 
 def transicionar(cadena,transiciones):
     cabezal = 0
     cinta = cadena + ["-"]
